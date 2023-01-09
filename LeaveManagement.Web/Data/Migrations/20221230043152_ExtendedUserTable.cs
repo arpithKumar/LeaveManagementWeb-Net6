@@ -40,7 +40,7 @@ namespace LeaveManagement.Web.Data.Migrations
                 name: "TxId",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
         }
 

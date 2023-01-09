@@ -8,7 +8,7 @@ namespace LeaveManagement.Web.Data
 
         public string? LastName { get; set; }
 
-        public string TxId { get; set; }
+        public string? TxId { get; set; }
 
         public DateTime DateOfBirth { get; set; }
 

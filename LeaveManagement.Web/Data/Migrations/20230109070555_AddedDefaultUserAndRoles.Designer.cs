@@ -4,6 +4,7 @@ using LeaveManagement.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagement.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230109070555_AddedDefaultUserAndRoles")]
+    partial class AddedDefaultUserAndRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,21 +109,19 @@ namespace LeaveManagement.Web.Data.Migrations
                         {
                             Id = "a17db9f9-59db-4a6d-aa79-b6151f2e764d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8e89d736-66f9-425e-8ca5-35e3db2bc07d",
+                            ConcurrencyStamp = "ed3cdfee-bb46-4b6e-8eee-39e3a3ac5430",
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfJoining = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "arpithk3@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "Arpith",
                             LastName = "Dubey",
                             LockoutEnabled = false,
                             NormalizedEmail = "ARPITHK3@GMAIL.COM",
-                            NormalizedUserName = "ARPITHK3@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECcTTjDzqtuuBBL5ROH9f0CH5w6vxlNPe36H3ff+/GEWFG5nSfwjTjXU2xgpC5TLEw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGGNCuMJS5AQYRur6m6AnxszndTIvLbArGPP1O0IWC1rLZY5J+DaZNijsNs2vk5WuQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3979d160-94d6-4a7d-9356-46f52aeaea90",
-                            TwoFactorEnabled = false,
-                            UserName = "arpithk3@gmail.com"
+                            SecurityStamp = "62c29b5f-4983-45de-905b-b0ff591a2eb9",
+                            TwoFactorEnabled = false
                         });
                 });
 
@@ -213,14 +213,14 @@ namespace LeaveManagement.Web.Data.Migrations
                         new
                         {
                             Id = "a17cb9f9-59cb-4a6c-aa79-b6151f2e764c",
-                            ConcurrencyStamp = "9ea015ff-f617-4013-a53c-2acb6b2e8be3",
+                            ConcurrencyStamp = "c5ca2344-985f-47cc-8996-d93857791483",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "a17ab9f9-59ab-4a6a-aa79-b6151f2e764a",
-                            ConcurrencyStamp = "aa4ff5ab-9f11-4d88-bb43-f551ffc2c9eb",
+                            ConcurrencyStamp = "a28d0059-196c-473c-8d1f-07b8e2bfcac9",
                             Name = "User",
                             NormalizedName = "USER"
                         });

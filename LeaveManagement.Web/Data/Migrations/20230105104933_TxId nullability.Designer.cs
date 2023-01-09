@@ -4,6 +4,7 @@ using LeaveManagement.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagement.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230105104933_TxId nullability")]
+    partial class TxIdnullability
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,28 +103,6 @@ namespace LeaveManagement.Web.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "a17db9f9-59db-4a6d-aa79-b6151f2e764d",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "8e89d736-66f9-425e-8ca5-35e3db2bc07d",
-                            DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfJoining = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "arpithk3@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "Arpith",
-                            LastName = "Dubey",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ARPITHK3@GMAIL.COM",
-                            NormalizedUserName = "ARPITHK3@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECcTTjDzqtuuBBL5ROH9f0CH5w6vxlNPe36H3ff+/GEWFG5nSfwjTjXU2xgpC5TLEw==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "3979d160-94d6-4a7d-9356-46f52aeaea90",
-                            TwoFactorEnabled = false,
-                            UserName = "arpithk3@gmail.com"
-                        });
                 });
 
             modelBuilder.Entity("LeaveManagement.Web.Data.LeaveAllocation", b =>
@@ -208,22 +188,6 @@ namespace LeaveManagement.Web.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "a17cb9f9-59cb-4a6c-aa79-b6151f2e764c",
-                            ConcurrencyStamp = "9ea015ff-f617-4013-a53c-2acb6b2e8be3",
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        },
-                        new
-                        {
-                            Id = "a17ab9f9-59ab-4a6a-aa79-b6151f2e764a",
-                            ConcurrencyStamp = "aa4ff5ab-9f11-4d88-bb43-f551ffc2c9eb",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -313,13 +277,6 @@ namespace LeaveManagement.Web.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "a17db9f9-59db-4a6d-aa79-b6151f2e764d",
-                            RoleId = "a17cb9f9-59cb-4a6c-aa79-b6151f2e764c"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
